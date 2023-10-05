@@ -51,7 +51,7 @@ AI 요소는 몬스터 기능에 필요한 요소인데, 적절한 학습을 통
 <img src="./docs/image.png">
   
 - 동영상
-  (https://www.youtube.com/watch?v=PN7YFKHOR9Y)
+  [![](./docs/GameVideo1.jpg)](https://www.youtube.com/watch?v=PN7YFKHOR9Y)
 
 <br><br>
 
