@@ -147,3 +147,74 @@ AI 요소는 몬스터 기능에 필요한 요소인데, 적절한 학습을 통
 특히 미적 요소를 높이기 위해 퍼포먼스를 최대한 끌어올리면서 동시에 적절한 최적화를 진행하여 게임 진행에 무리가 없도록 조율하는 것이 중요할 것 같습니다.
 
 그리고 언리얼 엔진 5의 블루프린트를 이용하여 캐릭터의 이동이나 전투 등 애니메이션, AI 시스템을 구현할 것입니다.
+
+<br>
+
+# 1. 게임 오브젝트 분해 (구성 요소 분석)
+
+|연번|오브젝트 이름|오브젝트 이미지|
+|:----:|:----:|:----:|
+|1|플레이어|<img src="./docs/01.png" height="300">|
+|2|경비대_일반|<img src="./docs/02.png" height="300">|
+|3|경비대_강화|<img src="./docs/03.png" height="300">|
+|4|농부_일반|<img src="./docs/04.png" height="300">|
+|5|농부_강화|<img src="./docs/05.png" height="300">|
+|6|교도관_일반|<img src="./docs/06.png" height="300">|
+|7|교도관_강화|<img src="./docs/07.png" height="300">|
+|8|범죄자_일반|<img src="./docs/08.png" height="300">|
+|9|플레이어|<img src="./docs/01.png" height="300">|
+|10|경비대_일반|<img src="./docs/02.png" height="300">|
+|11|경비대_강화|<img src="./docs/03.png" height="300">|
+|12|농부_일반|<img src="./docs/04.png" height="300">|
+|13|농부_강화|<img src="./docs/05.png" height="300">|
+|14|교도관_일반|<img src="./docs/06.png" height="300">|
+|15|교도관_강화|<img src="./docs/07.png" height="300">|
+|16|범죄자_일반|<img src="./docs/08.png" height="300">|
+|17|플레이어|<img src="./docs/01.png" height="300">|
+|18|경비대_일반|<img src="./docs/02.png" height="300">|
+|19|경비대_강화|<img src="./docs/03.png" height="300">|
+|20|농부_일반|<img src="./docs/04.png" height="300">|
+|21|농부_강화|<img src="./docs/05.png" height="300">|
+|22|교도관_일반|<img src="./docs/06.png" height="300">|
+|23|교도관_강화|<img src="./docs/07.png" height="300">|
+|24|범죄자_일반|<img src="./docs/08.png" height="300">|
+|25|플레이어|<img src="./docs/01.png" height="300">|
+|26|경비대_일반|<img src="./docs/02.png" height="300">|
+|27|경비대_강화|<img src="./docs/03.png" height="300">|
+|28|농부_일반|<img src="./docs/04.png" height="300">|
+|29|농부_강화|<img src="./docs/05.png" height="300">|
+|30|교도관_일반|<img src="./docs/06.png" height="300">|
+|31|교도관_강화|<img src="./docs/07.png" height="300">|
+|32|범죄자_일반|<img src="./docs/08.png" height="300">|
+|33|플레이어|<img src="./docs/01.png" height="300">|
+|34|경비대_일반|<img src="./docs/02.png" height="300">|
+|35|경비대_강화|<img src="./docs/03.png" height="300">|
+|36|농부_일반|<img src="./docs/04.png" height="300">|
+|37|농부_강화|<img src="./docs/05.png" height="300">|
+|38|교도관_일반|<img src="./docs/06.png" height="300">|
+|39|교도관_강화|<img src="./docs/07.png" height="300">|
+|40|범죄자_일반|<img src="./docs/08.png" height="300">|
+|41|플레이어|<img src="./docs/01.png" height="300">|
+|42|경비대_일반|<img src="./docs/02.png" height="300">|
+|43|경비대_강화|<img src="./docs/03.png" height="300">|
+|44|농부_일반|<img src="./docs/04.png" height="300">|
+|45|농부_강화|<img src="./docs/05.png" height="300">|
+|46|교도관_일반|<img src="./docs/06.png" height="300">|
+|47|교도관_강화|<img src="./docs/07.png" height="300">|
+|48|범죄자_일반|<img src="./docs/08.png" height="300">|
+|49|플레이어|<img src="./docs/01.png" height="300">|
+|50|경비대_일반|<img src="./docs/02.png" height="300">|
+|51|경비대_강화|<img src="./docs/03.png" height="300">|
+|52|농부_일반|<img src="./docs/04.png" height="300">|
+|53|농부_강화|<img src="./docs/05.png" height="300">|
+|54|교도관_일반|<img src="./docs/06.png" height="300">|
+|55|교도관_강화|<img src="./docs/07.png" height="300">|
+|56|범죄자_일반|<img src="./docs/08.png" height="300">|
+|57|플레이어|<img src="./docs/01.png" height="300">|
+|58|경비대_일반|<img src="./docs/02.png" height="300">|
+|59|경비대_강화|<img src="./docs/03.png" height="300">|
+|60|농부_일반|<img src="./docs/04.png" height="300">|
+|61|농부_강화|<img src="./docs/05.png" height="300">|
+|62|교도관_일반|<img src="./docs/06.png" height="300">|
+|63|교도관_강화|<img src="./docs/07.png" height="300">|
+|64|범죄자_일반|<img src="./docs/08.png" height="300">|
