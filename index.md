@@ -218,3 +218,12 @@ AI 요소는 몬스터 기능에 필요한 요소인데, 적절한 학습을 통
 |62|게임 종료 버튼|<img src="./docs/62.png" height="300">|
 |63|메뉴 버튼|<img src="./docs/63.png" height="300">|
 |64|지도|<img src="./docs/64.png" height="300">|
+
+# 2. 파라미터(속성) 뽑아 보기
+|속성|영문명칭|설명|비고|
+|:----:|:----:|:----:|:----:|
+|체력|Player_HP|플레이어의 체력 수치|
+|이동속도|Player_Speed|플레이어의 이동속도|
+|상태|Player_Status|기본, 이동, 공격, 회피, 피격, 경직, 넘어짐, 사망 등의 상태|
+|공격력|Player_Attack_Power|플레이어의 공격력|
+|방어력|Player_Depensive_Power|플레이어의 방어력|
