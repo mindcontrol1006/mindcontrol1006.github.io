@@ -150,80 +150,286 @@ AI 요소는 몬스터 기능에 필요한 요소인데, 적절한 학습을 통
 
 <br>
 
-# 1. 게임 오브젝트 분해 (구성 요소 분석)
+**게임  시스템  디자인**
 
-|연번|오브젝트 이름|오브젝트 이미지|
-|:----:|:----:|:----:|
-|1|플레이어|<img src="./docs/01.png" height="300">|
-|2|경비대_일반|<img src="./docs/02.png" height="300">|
-|3|경비대_강화|<img src="./docs/03.png" height="300">|
-|4|농부_일반|<img src="./docs/04.png" height="300">|
-|5|농부_강화|<img src="./docs/05.png" height="300">|
-|6|교도관_일반|<img src="./docs/06.png" height="300">|
-|7|교도관_강화|<img src="./docs/07.png" height="300">|
-|8|범죄자_일반|<img src="./docs/08.png" height="300">|
-|9|범죄자_강화|<img src="./docs/09.png" height="300">|
-|10|이단자_일반|<img src="./docs/10.png" height="300">|
-|11|이단자_강화|<img src="./docs/11.png" height="300">|
-|12|수도원장|<img src="./docs/12.png" height="300">|
-|13|기사_일반|<img src="./docs/13.png" height="300">|
-|14|기사_강화|<img src="./docs/14.png" height="300">|
-|15|궁병_일반|<img src="./docs/15.png" height="300">|
-|16|궁병_강화|<img src="./docs/16.png" height="300">|
-|17|벨페고르|<img src="./docs/17.png" height="300">|
-|18|체력 물약|<img src="./docs/18.png" height="300">|
-|19|교도관의 검|<img src="./docs/19.png" height="300">|
-|20|범죄자의 방패|<img src="./docs/20.png" height="300">|
-|21|수도원장의 모자|<img src="./docs/21.png" height="300">|
-|22|기사단 갑옷|<img src="./docs/22.png" height="300">|
-|23|잔디|<img src="./docs/23.png" height="300">|
-|24|나무|<img src="./docs/24.png" height="300">|
-|25|돌|<img src="./docs/25.png" height="300">|
-|26|물|<img src="./docs/26.png" height="300">|
-|27|일반 집|<img src="./docs/27.png" height="300">|
-|28|가로등|<img src="./docs/28.png" height="300">|
-|29|이정표|<img src="./docs/29.png" height="300">|
-|30|게시판|<img src="./docs/30.png" height="300">|
-|31|경비소 건물|<img src="./docs/31.png" height="300">|
-|32|책상|<img src="./docs/32.png" height="300">|
-|33|의자|<img src="./docs/33.png" height="300">|
-|34|책|<img src="./docs/34.png" height="300">|
-|35|랜턴|<img src="./docs/35.png" height="300">|
-|36|펜|<img src="./docs/36.png" height="300">|
-|37|편지|<img src="./docs/37.png" height="300">|
-|38|울타리|<img src="./docs/38.png" height="300">|
-|39|농장 건물|<img src="./docs/39.png" height="300">|
-|40|수레|<img src="./docs/40.png" height="300">|
-|41|나무통|<img src="./docs/41.png" height="300">|
-|42|교도소 건물|<img src="./docs/42.png" height="300">|
-|43|철창|<img src="./docs/43.png" height="300">|
-|44|열쇠|<img src="./docs/44.png" height="300">|
-|45|수도원 건물|<img src="./docs/45.png" height="300">|
-|46|십자가|<img src="./docs/46.png" height="300">|
-|47|촛불|<img src="./docs/47.png" height="300">|
-|48|성벽|<img src="./docs/48.png" height="300">|
-|49|망루|<img src="./docs/49.png" height="300">|
-|50|성문|<img src="./docs/50.png" height="300">|
-|51|사다리|<img src="./docs/51.png" height="300">|
-|52|도르레|<img src="./docs/52.png" height="300">|
-|53|깃발|<img src="./docs/53.png" height="300">|
-|54|방위 표시|<img src="./docs/54.png" height="300">|
-|55|미니맵|<img src="./docs/55.png" height="300">|
-|56|체력 게이지바|<img src="./docs/56.png" height="300">|
-|57|장비 창|<img src="./docs/57.png" height="300">|
-|58|아이템 창|<img src="./docs/58.png" height="300">|
-|59|재화 표시|<img src="./docs/59.png" height="300">|
-|60|타이틀 화면 이미지|<img src="./docs/60.png" height="300">|
-|61|게임 시작 버튼|<img src="./docs/61.png" height="300">|
-|62|게임 종료 버튼|<img src="./docs/62.png" height="300">|
-|63|메뉴 버튼|<img src="./docs/63.png" height="300">|
-|64|지도|<img src="./docs/64.png" height="300">|
+**프로젝트명  :  Seven  Deadly  Sins**
 
-# 2. 파라미터(속성) 뽑아 보기
-|속성|영문명칭|설명|비고|
-|:----:|:----:|:----:|:----:|
-|체력|Player_HP|플레이어의 체력 수치|
-|이동속도|Player_Speed|플레이어의 이동속도|
-|상태|Player_Status|기본, 이동, 공격, 회피, 피격, 경직, 넘어짐, 사망 등의 상태|
-|공격력|Player_Attack_Power|플레이어의 공격력|
-|방어력|Player_Depensive_Power|플레이어의 방어력|
+**개발자  :  강윤성**
+
+**2023.  10.  12.**
+
+1. 게임  오브젝트  분해  (구성  요소  분석)1.  게임  오브젝트  분해  (구성  요소  분석)
+
+
+
+|**연번**|**종류**|**OBJ 이름**|**Obj 영문명**|**사용처**|**오브젝트  이미지**|
+| - | - | - | - | - | - |
+|1|캐릭터|플레이어|Player|플레이어 캐릭터|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.001.png)|
+|2|몬스터|경비대\_일반|Guards\_Com mon|맵 : 경비소|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.002.png)|
+|3|몬스터|경비대\_강화|Guards\_Enfo rce|맵 : 경비소|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.003.png)|
+|4|몬스터|농부\_일반|Farmer\_Com mon|맵 : 농장|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.004.png)|
+|5|몬스터|농부\_강화|Farmer\_Enfo rce|맵 : 농장|<p>![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.005.png)</p><p>+  주변에  붉은  이펙트</p>|
+|6|몬스터|교도관\_일반|Jailer\_Comm on|맵 : 교도소|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.006.png)|
+|7|몬스터|교도관\_강화|Jailer\_Enforc e|맵 : 교도소|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.007.png)|
+|8|몬스터|범죄자\_일반|Criminal\_Co mmon|맵 : 교도소, 전체|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.008.png)|
+|9|몬스터|범죄자\_강화|Criminal\_Enf orce|맵 : 교도소, 전체|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.009.png)|
+|10|몬스터|이단자\_일반|Heretic\_Com mon|맵 : 수도원|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.010.png)|
+|11|몬스터|이단자\_강화|Heretic\_Enfo rce|맵 : 수도원|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.011.png)|
+|12|보스 몬스터|수도원장|Abbot|맵 : 수도원 中 보스맵|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.012.png)|
+|13|몬스터|기사\_일반|Knight\_Com mon|맵 : 성|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.013.png)|
+|14|몬스터|기사\_강화|Knight\_Enfor ce|맵 : 성|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.014.png)|
+|15|몬스터|궁병\_일반|Archer\_Com mon|맵 : 성|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.015.png)|
+|16|몬스터|궁병\_강화|Archer\_Enfor ce|맵 : 성|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.016.png)|
+|17|보스 몬스터|벨페고르|Belphegor|<p>맵 : 성 中 </p><p>보스맵</p>|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.017.png)|
+|18|회복 아이템|체력 물약|HP\_Potion|공통 아이템|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.018.jpeg)|
+|19|장비 아이템|교도관의 검|Jailer\_Sword|무기 아이템|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.019.jpeg)|
+|20|장비 아이템|범죄자의 방패|Criminal\_Shil ed|방패 아이템|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.020.jpeg)|
+|21|장비 아이템|수도원장의 모자|Abbot\_Hat|모자 아이템|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.021.png)|
+|22|장비 아이템|기사단 갑옷|Knight\_Arm or|의상 아이템|<p>![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.022.png)</p><p>기존  의상  Material  수정</p>|
+|23|배경 요소|잔디|Grass|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.023.jpeg)|
+|24|배경 요소|나무|Wood|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.024.jpeg)|
+|25|배경 요소|돌|Stone|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.025.jpeg)|
+|26|배경 요소|물|Water|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.026.jpeg)|
+|27|배경 요소|일반 집|House[numb er]|공용|![ref1]|
+|28|배경 요소|가로등|Street lamp|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.028.jpeg)|
+|29|배경 요소|이정표|Milestone|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.029.jpeg)|
+|30|배경 요소|게시판|Notice board|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.030.jpeg)|
+|31|배경 요소|경비소 건물|Guarhouse\_ Building[nu mber]|맵 : 경비소|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.031.png)|
+|32|배경 요소|책상|Desk|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.032.png)|
+|33|배경 요소|의자|Chair|공용||
+|34|배경 요소|책|Book|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.033.jpeg)|
+|35|배경 요소|랜턴|Lantern|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.034.jpeg)|
+|36|배경 요소|펜|Pen|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.035.jpeg)|
+|37|배경 요소|편지|Letter|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.036.png)|
+|38|배경 요소|울타리|Fence|공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.037.png)|
+|39|배경 요소|농장 건물|Farm\_Buildin g[number]|맵 : 농장|![ref1]|
+|40|배경 요소|수레|Wagon|맵 : 농장|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.038.png)|
+|41|배경 요소|나무통|Wooden\_Bar rel|맵 : 농장|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.039.jpeg)|
+|42|배경 요소|교도소 건물|Prison\_Buildi ng[number]|맵 : 교도소|![ref2]|
+|43|배경 요소|철창|Iron\_Cage|맵 : 교도소|![ref2]|
+|44|배경 요소|열쇠|Prison\_Key|맵 : 교도소|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.041.jpeg)|
+|45|배경 요소|수도원 건물|Monastery\_B uilding[num ber]|맵 : 수도원|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.042.jpeg)|
+|46|배경 요소|십자가|Cross|맵 : 수도원|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.043.jpeg)|
+|47|배경 요소|촛불|Candlelight|맵 : 수도원|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.044.jpeg)|
+|48|배경 요소|성벽|Castle\_Ramp art|맵 : 성|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.045.jpeg)|
+|49|배경 요소|망루|Castle\_Watc hTower|맵 : 성|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.046.jpeg)|
+|50|배경 요소|성문|Castle\_Gate|맵 : 성|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.047.png)|
+|51|배경 요소|사다리|Ladder|맵 : 성, 공용|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.048.png)|
+|52|배경 요소|도르레|Castle\_Pulley|맵 : 성|<p>![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.049.png)</p><p>사람이  탈  수  있는  이동장치</p>|
+|53|배경 요소|깃발|Castle\_Flag|맵 : 성|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.050.png)|
+|54|UI|방위 표시|Compass|현재의 방위 표시|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.051.png)|
+|55|UI|미니맵|`  `Minimap|플레이어 중심으로 미니맵 표시|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.052.png)|
+|56|UI|체력 게이지 바|HP\_Bar|체력 게이지 표시|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.053.png)|
+|57|UI|장비 창|Equipment\_I nventory|현재 장착한 장비 표시|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.054.png)|
+|58|UI|아이템 창|Item\_Invent ory|보유한 장비 및 포션 확인 및 변경|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.055.jpeg)|
+|59|UI|재화 표시|Money\_UI|재화 표시|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.056.png)|
+|60|UI|타이틀 화면 이미지|Title\_Image|타이틀 화면|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.057.jpeg)|
+|61|UI|게임 시작 버튼|GameStart\_B utton|타이틀 화면|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.058.jpeg)|
+|62|UI|게임 종료 버튼|EndGame\_B utton|타이틀 화면, 메뉴에 존재|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.059.png)|
+|63|UI|메뉴 버튼|Menu\_Butto n|게임 재개, 종료 선택 가능|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.060.png)|
+|64|UI|지도|Map|전체 맵과 현재 위치 표시|![](docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.061.jpeg)|
+
+2. 파라미터(속성)  뽑아  보기
+1) 오브젝트  이름  :  Player
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|체력|Player\_HP|플레이어의  체력  수치||
+|이동속도|Player\_Speed|플레이어의  이동속도||
+|상태|Player\_Status|기본,  이동,  공격,  회피,  피격,  경직,  넘어짐,  사망  등의 상태||
+|공격력|Player\_Attack \_Power|플레이어  공격력||
+|방어력|Player\_Depens ive\_Power|플레이어  방어력||
+2) 오브젝트  이름  :  몬스터  종류  전체
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|체력|[몬스터명]\_HP|플레이어의  체력  수치||
+|이동속도|[몬스터명] \_Speed|플레이어의  이동속도||
+|상태|[몬스터명] \_Status|기본,  이동,  공격,  회피,  피격,  경직,  넘어짐,  사망  등의 상태||
+|공격력|[몬스터명] \_Attack\_Power|플레이어  공격력||
+|방어력|[몬스터명] \_Depensive\_Po wer|플레이어  방어력||
+3) 오브젝트  이름  :  경비대
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|일반|Guards\_Comm on|일반  경비대원,  경비소의  현상  수배로  인해  대부분의  캐 릭터  및  몬스터들이  플레이어를  적으로  간주함|맵  :  경비소|
+|강화|Guards\_Enfor ce|강화된  경비대원,  일반  경비대원보다  기본  스탯이  높으며 특별한  공격  기술을  사용할  수  있음|맵  :  경비소|
+
+4) 오브젝트  이름  :  농부
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|일반|Farmer\_Com mon|근접  공격을  할  수  있는  일반  농부|맵  :  농장|
+|강화|Farmer\_Enfor ce|강화된  농부,  일반  농부보다  기본  스탯이  높으며  특별한 공격  기술을  사용할  수  있음|맵  :  농장|
+
+5) 오브젝트  이름  :  교도관
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|일반|Jailer\_Commo n|원거리  공격을  할  수  있는  일반  교도관|맵  :  교도소|
+|강화|Jailer\_Enforce|강화된  교도관,  일반  교도관보다  기본  스탯이  높으며  특 별한  공격  기술을  사용할  수  있음|맵  :  교도소|
+|전리품|Jailer\_Sword|교도관이  허리춤에  차고  있던  검,  교도관을  처치할  시  일 정  확률로  드랍한다.|무기  아이템|
+
+6) 오브젝트  이름  :  범죄자
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|일반|Criminal\_Com mon|근접  공격을  할  수  있는  일반  범죄자|맵  :  교도소, 전체|
+|강화|Criminal\_Enfo rce|강화된  범죄자,  일반  범죄자보다  기본  스탯이  높으며  특 별한  공격  기술을  사용할  수  있음|맵  :  교도소, 전체|
+|전리품|Criminal\_Shile d|범죄자가  지니고  있던  방패,  범죄자를  처치할  시  일정  확 률로  드랍한다.|방패  아이템|
+
+7) 오브젝트  이름  :  이단자
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|일반|Heretic\_Comm on|근접  공격을  할  수  있는  일반  이단자|맵  :  수도원|
+|강화|Heretic\_Enfor ce|강화된  이단자,  일반  이단자보다  기본  스탯이  높으며  특 별한  공격  기술을  사용할  수  있음|맵  :  수도원|
+
+8) 오브젝트  이름  :  수도원장
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|보스|Abbot|맵  :  수도원의  보스  몬스터,  상당히  강하며  다양한  공격을 기술을  사용할  수  있음,  한  마리만  존재함|맵  :  수도원 中  보스맵|
+|스킬|Abbot\_skill[nu mber]|다양한  범위  기술을  사용할  수  있음|맵  :  수도원 中  보스맵|
+|전리품|Abbot\_Hat|수도원장이  지니고  있던  모자,  수도원장을  처치할  시  일 정  확률로  드랍한다.|모자  아이템|
+
+9) 오브젝트  이름  :  기사
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|일반|Knight\_Comm on|근접  공격을  할  수  있는  일반  기사|맵  :  성|
+|강화|Knight\_Enforc e|강화된  기사,  일반  기사보다  기본  스탯이  높으며  특별한 공격  기술을  사용할  수  있음|맵  :  성|
+|전리품|Knight\_Armor|기사가  착용하고  있던  갑옷,  기사를  처치할  시  일정  확률 로  드랍한다.|의상  아이템|
+
+10) 오브젝트  이름  :  궁병
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|일반|Archer\_Comm on|근접  공격을  할  수  있는  일반  궁병|맵  :  성|
+|강화|Archer\_Enforc e|강화된  궁병,  일반  궁병보다  기본  스탯이  높으며  특별한 공격  기술을  사용할  수  있음|맵  :  성|
+
+11) 오브젝트  이름  :  벨페고르
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|보스|Belphegor|맵  :  성의  보스  몬스터,  상당히  강하며  다양한  공격을  기 술을  사용할  수  있음,  한  마리만  존재함|맵  :  성  中 보스맵|
+|스킬|Belphegor\_skil l[number]|다양한  범위  기술을  사용할  수  있음|맵  :  성  中 보스맵|
+
+12) 오브젝트  이름  :  체력  물약
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|회복량|HP\_Potion\_He aling|체력  회복  수치||
+|개수|HP\_Potion\_Co unt|체력  물약  개수||
+13) 오브젝트  이름  :  배경
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|마을|Town|플레이어가  모험을  시작하는  곳,  마을을  중심으로  곳곳의 필드로  나아갈  수  있다.  대부분  플레이어와  우호적인  관 계를  지닌  NPC들로  구성되어있다.|평화로움|
+|경비소|Guards\_Office|플레이어의  현상수배를  공지한  곳이며  국가  직속  경비소 이다.  곳곳에  초소가  존재하고  삼엄한  경비  태세를  유지 한다.  아무  잘못도  하지  않은  플레이어에게  누명을  씌우 며  경비대의  역할을  제대로  수행하지  않는  듯한  느낌을 준다.|긴장되는  분 위기|
+|농장|Farm|한적한  농장이며,  사회적으로  일을  안  하고  놀고만  있는 농부들로  인해  식량난이  일어난  상태이며  플레이어가  농 부들과의  전투를  통해  농부들을  다시  일하게  시키는  이벤 트가  있는  곳이다.|평 화 로 움 과 분주함이  공 존하는  분위 기|
+|교도소|Jail|험악하고  어두운  분위기,  범죄자들을  관리하지  않는  교도 관들과  그에  따라  맵  곳곳에  돌아다니는  범죄자들로  인해 국가가  어지러운  상태에  처해있다.|험악하고  어 두운  분위기|
+|수도원|Abbey|이단자들이 도사리는 수도원, 수도원장을 물리치고 현 사태를 완화시켜야 한다.|음산한 분위기|
+|성|Castle|먼 과거부터 명예를 중시한 왕국의 성, 현재는 악마 벨페고르가 왕을 죽이고 군림하여 세계 전체에 어두운 기운을 퍼뜨렸다.|고귀함과 어두움의 공존|
+
+3. 행동  뽑아  보기
+
+\1)  오브젝트  이름  :  Player,  몬스터  종류  전체(몬스터는  키  입력  요소  배제)
+
+
+
+|**행동**|**영문명칭**|**설명**|
+| - | - | - |
+|기본|Idle|가만히  있을  때  Idle  모션이  출력된다.|
+|전진|Front|W키를  눌러서  앞으로  이동한다.|
+|후진|Back|S키를  눌러서  뒤로  이동한다.|
+|좌측  이동|Left|A키를  눌러서  좌측으로  이동한다.|
+|우측  이동|Right|D키를  눌러서  우측으로  이동한다.|
+|회피(구르기)|Avoid|스페이스  바를  눌러서  입력한  키의  방향대로 구른다(공격  면역  상태)|
+|공격|Attack|마우스  좌측  클릭을  통해  공격한다.  모션은  기 본  공격  중  랜덤하게  발동한다.|
+|스킬  공격|Skill\_Attack|마우스  우측  클릭을  통해  스킬  공격을  가한다.|
+|피격(경직)|Heated|맞았을  시  몸이  경직  잠시동안  경직된다.|
+|넘어짐|Trip|강력한  공격을  받았을  시  잠시  동안  넘어진다.|
+|사망|Dead|체력  게이지가  다  닳았을  때  사망  모션이  출 력되며  게임이  종료된다.|
+
+4. 상태  뽑아  보기
+
+\1)  오브젝트  이름  :  Player,  몬스터  종류  전체(몬스터는  키  입력  요소  배제)
+
+
+
+<table><tr><th colspan="1"><b>현상태</b></th><th colspan="1"><b>전이상태</b></th><th colspan="1"><b>전이조건</b></th></tr>
+<tr><td colspan="2">기본</td><td colspan="1">가만히  있을  때  Idle  모션이  출력된다.</td></tr>
+<tr><td colspan="1" rowspan="10">기본</td><td colspan="1">전진</td><td colspan="1">W키를  눌러서  앞으로  이동한다.</td></tr>
+<tr><td colspan="1">후진</td><td colspan="1">S키를  눌러서  뒤로  이동한다.</td></tr>
+<tr><td colspan="1">좌측  이동</td><td colspan="1">A키를  눌러서  좌측으로  이동한다.</td></tr>
+<tr><td colspan="1">우측  이동</td><td colspan="1">D키를  눌러서  우측으로  이동한다.</td></tr>
+<tr><td colspan="1">회피(구르기)</td><td colspan="1">스페이스  바를  눌러서  입력한  키의  방향대로  구른 다(공격  면역  상태)</td></tr>
+<tr><td colspan="1">공격</td><td colspan="1">마우스  좌측  클릭을  통해  공격한다.  모션은  기본 공격  중  랜덤하게  발동한다.</td></tr>
+<tr><td colspan="1">스킬  공격</td><td colspan="1">마우스  우측  클릭을  통해  스킬  공격을  가한다.</td></tr>
+<tr><td colspan="1">피격(경직)</td><td colspan="1">맞았을  시  몸이  경직  잠시동안  경직된다.</td></tr>
+<tr><td colspan="1">넘어짐</td><td colspan="1">강력한  공격을  받았을  시  잠시  동안  넘어진다.</td></tr>
+<tr><td colspan="1">사망</td><td colspan="1">체력  게이지가  다  닳았을  때  사망  모션이  출력되 며  게임이  종료된다.</td></tr>
+<tr><td colspan="1"><p>전진</p><p>후진</p><p>좌측  이동 우측  이동</p></td><td colspan="1"><p>전진</p><p>후진</p><p>좌측  이동 우측  이동</p></td><td colspan="1">먼저  입력  된  키  2개의  방향으로  이동이  가능하 며,  3개  이상  눌렀을  시  가장  먼저  입력된  키를 제외한  2개의  키에  해당하는  방향으로  이동한다.</td></tr>
+<tr><td colspan="1"><p>전진</p><p>후진</p><p>좌측  이동 우측  이동</p></td><td colspan="1">회피(구르기)</td><td colspan="1">스페이스  바  키를  눌러서  이동하는  방향으로  구르 기를  시전한다.</td></tr>
+<tr><td colspan="1"><p>공격</p><p>스킬  공격</p></td><td colspan="1">피격(경직) 넘어짐 사망</td><td colspan="1">마우스  클릭을  통한  공격을  실행했을  때  공격이 적에게  닿은  이후  플레이어  본인이  공격을  맞아서 피격,  넘어짐,  사망에  이르렀을  때  데미지  계산은 완료된  상태이며,  공격이  닿기  전에  입력  후  위  3 가지  상태로  전환될  때  데미지는  들어가지  않는 다.</td></tr>
+<tr><td colspan="1">넘어짐</td><td colspan="1">사망</td><td colspan="1">넘어진  상태에서  사망하게  된다면  그에  해당하는 죽는  모션이  출력된다.</td></tr>
+</table>
+
+
+5\.  플레이어  캐릭터  속성(파라미터)
+
+
+
+|**속성**|**영문명칭**|**설명**|**비고**|
+| - | - | - | - |
+|교도관의  검|Jailer\_Sword|기본  무기보다  공격력이  더  높아서,  공격  시  데미지가  높 아진다.|데미지  증가|
+|범죄자의  방패|Criminal\_Shile d|기본  방패보다  방어도가  높아서  피격  시  데미지가  감소한 다.|데미지  감소|
+|수도원장  모자|Abbot\_Hat|착용  시에  최대  체력이  증가한다.|최대  체력  증 가|
+|기사단  갑옷|Knight\_Armor|착용  시에  방어도가  증가하여  피격  데미지가  감소한다.|데미지  감소|
+
+6. 게임의  규칙
+1) 핵심  규칙
+   1. 플레이어는  현재  상태를  잘  파악하여  체력  게이지  바가  다  닳아  게임  오버가  되지  않도록  해야한다.
+   1. 전투나  퀘스트를  통해  얻은  게임  내  재화를  이용하여  캐릭터를  성장시켜야  한다.
+   1. 플레이어는  준비된  스토리에  따라  모험하며  최종  보스  몬스터와의  전투에서  승리하여  게임을  클리어한다.
+
+2) 보조  규칙
+- 몬스터의  공격을  회피기로  피할  수  있고,  적절한  공격  타이밍에 전투에서  유리한  상황을  취할  수  있다.
+- 각  몬스터는  다양한  공격  패턴이  있기  때문에  다양한  방식으로 
+
+
+7\.  게임에서  사용될  공식
+
+- 장비  착용에  따른  데미지  계산  변화
+- 스킬  공격  사용  이후  재사용  대기  시간  계산  및  조건부  재사용  대기  시간  부여
+- 방향  전환  시  이동속도  변화  기능
+
+[ref1]: docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.027.jpeg
+[ref2]: docs/Aspose.Words.c732007b-06de-455a-890c-dd562bc3a9ca.040.jpeg
+
+
