@@ -162,59 +162,59 @@ AI 요소는 몬스터 기능에 필요한 요소인데, 적절한 학습을 통
 |6|교도관_일반|<img src="./docs/06.png" height="300">|
 |7|교도관_강화|<img src="./docs/07.png" height="300">|
 |8|범죄자_일반|<img src="./docs/08.png" height="300">|
-|9|플레이어|<img src="./docs/01.png" height="300">|
-|10|경비대_일반|<img src="./docs/02.png" height="300">|
-|11|경비대_강화|<img src="./docs/03.png" height="300">|
-|12|농부_일반|<img src="./docs/04.png" height="300">|
-|13|농부_강화|<img src="./docs/05.png" height="300">|
-|14|교도관_일반|<img src="./docs/06.png" height="300">|
-|15|교도관_강화|<img src="./docs/07.png" height="300">|
-|16|범죄자_일반|<img src="./docs/08.png" height="300">|
-|17|플레이어|<img src="./docs/01.png" height="300">|
-|18|경비대_일반|<img src="./docs/02.png" height="300">|
-|19|경비대_강화|<img src="./docs/03.png" height="300">|
-|20|농부_일반|<img src="./docs/04.png" height="300">|
-|21|농부_강화|<img src="./docs/05.png" height="300">|
-|22|교도관_일반|<img src="./docs/06.png" height="300">|
-|23|교도관_강화|<img src="./docs/07.png" height="300">|
-|24|범죄자_일반|<img src="./docs/08.png" height="300">|
-|25|플레이어|<img src="./docs/01.png" height="300">|
-|26|경비대_일반|<img src="./docs/02.png" height="300">|
-|27|경비대_강화|<img src="./docs/03.png" height="300">|
-|28|농부_일반|<img src="./docs/04.png" height="300">|
-|29|농부_강화|<img src="./docs/05.png" height="300">|
-|30|교도관_일반|<img src="./docs/06.png" height="300">|
-|31|교도관_강화|<img src="./docs/07.png" height="300">|
-|32|범죄자_일반|<img src="./docs/08.png" height="300">|
-|33|플레이어|<img src="./docs/01.png" height="300">|
-|34|경비대_일반|<img src="./docs/02.png" height="300">|
-|35|경비대_강화|<img src="./docs/03.png" height="300">|
-|36|농부_일반|<img src="./docs/04.png" height="300">|
-|37|농부_강화|<img src="./docs/05.png" height="300">|
-|38|교도관_일반|<img src="./docs/06.png" height="300">|
-|39|교도관_강화|<img src="./docs/07.png" height="300">|
-|40|범죄자_일반|<img src="./docs/08.png" height="300">|
-|41|플레이어|<img src="./docs/01.png" height="300">|
-|42|경비대_일반|<img src="./docs/02.png" height="300">|
-|43|경비대_강화|<img src="./docs/03.png" height="300">|
-|44|농부_일반|<img src="./docs/04.png" height="300">|
-|45|농부_강화|<img src="./docs/05.png" height="300">|
-|46|교도관_일반|<img src="./docs/06.png" height="300">|
-|47|교도관_강화|<img src="./docs/07.png" height="300">|
-|48|범죄자_일반|<img src="./docs/08.png" height="300">|
-|49|플레이어|<img src="./docs/01.png" height="300">|
-|50|경비대_일반|<img src="./docs/02.png" height="300">|
-|51|경비대_강화|<img src="./docs/03.png" height="300">|
-|52|농부_일반|<img src="./docs/04.png" height="300">|
-|53|농부_강화|<img src="./docs/05.png" height="300">|
-|54|교도관_일반|<img src="./docs/06.png" height="300">|
-|55|교도관_강화|<img src="./docs/07.png" height="300">|
-|56|범죄자_일반|<img src="./docs/08.png" height="300">|
-|57|플레이어|<img src="./docs/01.png" height="300">|
-|58|경비대_일반|<img src="./docs/02.png" height="300">|
-|59|경비대_강화|<img src="./docs/03.png" height="300">|
-|60|농부_일반|<img src="./docs/04.png" height="300">|
-|61|농부_강화|<img src="./docs/05.png" height="300">|
-|62|교도관_일반|<img src="./docs/06.png" height="300">|
-|63|교도관_강화|<img src="./docs/07.png" height="300">|
-|64|범죄자_일반|<img src="./docs/08.png" height="300">|
+|9|범죄자_강화|<img src="./docs/09.png" height="300">|
+|10|이단자_일반|<img src="./docs/10.png" height="300">|
+|11|이단자_강화|<img src="./docs/11.png" height="300">|
+|12|수도원장|<img src="./docs/12.png" height="300">|
+|13|기사_일반|<img src="./docs/13.png" height="300">|
+|14|기사_강화|<img src="./docs/14.png" height="300">|
+|15|궁병_일반|<img src="./docs/15.png" height="300">|
+|16|궁병_강화|<img src="./docs/16.png" height="300">|
+|17|벨페고르|<img src="./docs/17.png" height="300">|
+|18|체력 물약|<img src="./docs/18.png" height="300">|
+|19|교도관의 검|<img src="./docs/19.png" height="300">|
+|20|범죄자의 방패|<img src="./docs/20.png" height="300">|
+|21|수도원장의 모자|<img src="./docs/21.png" height="300">|
+|22|기사단 갑옷|<img src="./docs/22.png" height="300">|
+|23|잔디|<img src="./docs/23.png" height="300">|
+|24|나무|<img src="./docs/24.png" height="300">|
+|25|돌|<img src="./docs/25.png" height="300">|
+|26|물|<img src="./docs/26.png" height="300">|
+|27|일반 집|<img src="./docs/27.png" height="300">|
+|28|가로등|<img src="./docs/28.png" height="300">|
+|29|이정표|<img src="./docs/29.png" height="300">|
+|30|게시판|<img src="./docs/30.png" height="300">|
+|31|경비소 건물|<img src="./docs/31.png" height="300">|
+|32|책상|<img src="./docs/32.png" height="300">|
+|33|의자|<img src="./docs/33.png" height="300">|
+|34|책|<img src="./docs/34.png" height="300">|
+|35|랜턴|<img src="./docs/35.png" height="300">|
+|36|펜|<img src="./docs/36.png" height="300">|
+|37|편지|<img src="./docs/37.png" height="300">|
+|38|울타리|<img src="./docs/38.png" height="300">|
+|39|농장 건물|<img src="./docs/39.png" height="300">|
+|40|수레|<img src="./docs/40.png" height="300">|
+|41|나무통|<img src="./docs/41.png" height="300">|
+|42|교도소 건물|<img src="./docs/42.png" height="300">|
+|43|철창|<img src="./docs/43.png" height="300">|
+|44|열쇠|<img src="./docs/44.png" height="300">|
+|45|수도원 건물|<img src="./docs/45.png" height="300">|
+|46|십자가|<img src="./docs/46.png" height="300">|
+|47|촛불|<img src="./docs/47.png" height="300">|
+|48|성벽|<img src="./docs/48.png" height="300">|
+|49|망루|<img src="./docs/49.png" height="300">|
+|50|성문|<img src="./docs/50.png" height="300">|
+|51|사다리|<img src="./docs/51.png" height="300">|
+|52|도르레|<img src="./docs/52.png" height="300">|
+|53|깃발|<img src="./docs/53.png" height="300">|
+|54|방위 표시|<img src="./docs/54.png" height="300">|
+|55|미니맵|<img src="./docs/55.png" height="300">|
+|56|체력 게이지바|<img src="./docs/56.png" height="300">|
+|57|장비 창|<img src="./docs/57.png" height="300">|
+|58|아이템 창|<img src="./docs/58.png" height="300">|
+|59|재화 표시|<img src="./docs/59.png" height="300">|
+|60|타이틀 화면 이미지|<img src="./docs/60.png" height="300">|
+|61|게임 시작 버튼|<img src="./docs/61.png" height="300">|
+|62|게임 종료 버튼|<img src="./docs/62.png" height="300">|
+|63|메뉴 버튼|<img src="./docs/63.png" height="300">|
+|64|지도|<img src="./docs/64.png" height="300">|
