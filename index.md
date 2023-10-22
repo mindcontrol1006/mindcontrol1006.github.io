@@ -464,33 +464,33 @@ AI 요소는 몬스터 기능에 필요한 요소인데, 적절한 학습을 통
 - 장비  아이템  착용  및  장비창,  인벤토리  구현
 - 코인(전리품)  시스템  구현
 - 보스  몬스터  전투(광역  공격,  특별한  공격)  구현
-- 체력  회복  물약  구현
+- 체력  회복  물약  구현H
 
 2. 시간별  흐름도  flowchart
 
-![](Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.001.jpeg)
+![](docs/Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.001.jpeg)
 
 3. 키보드  이벤트에  대한  흐름도
 
-![](Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.002.jpeg)
+![](docs/Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.002.jpeg)
 
 4. 용어정리
 
 
 
 <table><tr><th colspan="1"><b>No</b></th><th colspan="1"><b>속성</b></th><th colspan="1"><b>요소</b></th><th colspan="1"><b>명칭</b></th><th colspan="1"><b>설명</b></th></tr>
-<tr><td colspan="1">1</td><td colspan="1"></td><td colspan="2">게임  실행  시  첫  화면이며,  시네마틱 </td><td colspan="1">영상,  타이틀  화면,  게임  시작,  게임  종료  버튼이  있다.</td></tr>
+<tr><td colspan="1">1</td><td colspan="1">시작  화면</td><td colspan="2">화면  요소</td><td colspan="1">게임  실행  시  첫  화면이며,  시네마틱 영상,  타이틀  화면,  게임  시작,  게임  종료  버튼이  있다.</td></tr>
 <tr><td colspan="1">2</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">Cinematic_Video</td><td colspan="1">게임  플레이  영상이  담겨있는  시네마틱  영상</td></tr>
-<tr><td colspan="1">3</td><td colspan="1" rowspan="2" valign="top">시작  화면</td><td colspan="1" rowspan="2">화면  요소</td><td colspan="1">Title_Image</td><td colspan="1">게임  배경이  담겨진  타이틀  화면</td></tr>
+<tr><td colspan="1">3</td><td colspan="1" rowspan="2" valign="top"></td><td colspan="1" rowspan="2"></td><td colspan="1">Title_Image</td><td colspan="1">게임  배경이  담겨진  타이틀  화면</td></tr>
 <tr><td colspan="1">4</td><td colspan="1">Start_Btn</td><td colspan="1">게임  시작을  위한  버튼</td></tr>
 <tr><td colspan="1">5</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">End_Btn</td><td colspan="1">게임  종료를  위한  버튼</td></tr>
-<tr><td colspan="1">6</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">Status_Bar</td><td colspan="1"><p>플레이어의  체력  또는  기력  등의  게이지바가  표시되어 </p><p>현재  상태를  확인할  수  있는  UI</p></td></tr>
+<tr><td colspan="1">6</td><td colspan="1">게임  화면</td><td colspan="1">화면  요소</td><td colspan="1">Status_Bar</td><td colspan="1"><p>플레이어의  체력  또는  기력  등의  게이지바가  표시되어 </p><p>현재  상태를  확인할  수  있는  UI</p></td></tr>
 <tr><td colspan="1">7</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">Direction_UI</td><td colspan="1">현재  플레이어가  바라보는  방위를  표시하는  UI</td></tr>
-<tr><td colspan="1">8</td><td colspan="1" valign="top">게임  화면</td><td colspan="1" valign="top">화면  요소</td><td colspan="1">Minimap_UI</td><td colspan="1">현재  위치와  주변을  파악할  수  있는  미니맵  표시</td></tr>
+<tr><td colspan="1">8</td><td colspan="1" valign="top"></td><td colspan="1" valign="top"></td><td colspan="1">Minimap_UI</td><td colspan="1">현재  위치와  주변을  파악할  수  있는  미니맵  표시</td></tr>
 <tr><td colspan="1">9</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">Equipment_UI</td><td colspan="1">현재  착용한  장비나  아이템이  간단하게  표시되는  UI</td></tr>
 <tr><td colspan="1">10</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">Money_UI</td><td colspan="1">게임  내  재화를  표시하는  UI</td></tr>
 <tr><td colspan="1">11</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">Menu_UI</td><td colspan="1">게임  종료  및  설정을  위한  UI</td></tr>
-<tr><td colspan="1">12</td><td colspan="1"></td><td colspan="1">체력</td><td colspan="1">Player_HP</td><td colspan="1">플레이어의  체력  수치</td></tr>
+<tr><td colspan="1">12</td><td colspan="1">스크립트</td><td colspan="1">체력</td><td colspan="1">Player_HP</td><td colspan="1">플레이어의  체력  수치</td></tr>
 <tr><td colspan="1">13</td><td colspan="1"></td><td colspan="1">이동속도</td><td colspan="1">Player_Speed</td><td colspan="1">플레이어의  이동속도</td></tr>
 <tr><td colspan="1">14</td><td colspan="1"></td><td colspan="1">상태</td><td colspan="1">Player_Status</td><td colspan="1">기본,  이동,  공격,  회피,  피격,  경직,  넘어짐,  사망  등의 상태</td></tr>
 <tr><td colspan="1">15</td><td colspan="1"></td><td colspan="1">공격력</td><td colspan="1">Player_Attack_Power</td><td colspan="1">플레이어  공격력</td></tr>
@@ -499,7 +499,7 @@ AI 요소는 몬스터 기능에 필요한 요소인데, 적절한 학습을 통
 <tr><td colspan="1">18</td><td colspan="1"></td><td colspan="1">이동속도</td><td colspan="1">[몬스터명] _Speed</td><td colspan="1">플레이어의  이동속도</td></tr>
 <tr><td colspan="1">19</td><td colspan="1"></td><td colspan="1">상태</td><td colspan="1">[몬스터명] _Status</td><td colspan="1">기본,  이동,  공격,  회피,  피격,  경직,  넘어짐,  사망  등의 상태</td></tr>
 <tr><td colspan="1">20</td><td colspan="1"></td><td colspan="1">공격력</td><td colspan="1">[몬스터명] _Attack_Power</td><td colspan="1">플레이어  공격력</td></tr>
-<tr><td colspan="1">21</td><td colspan="1" valign="top">스크립트</td><td colspan="1">방어력</td><td colspan="1">[몬스터명] _Depensive_Power</td><td colspan="1">플레이어  방어력</td></tr>
+<tr><td colspan="1">21</td><td colspan="1" valign="top"></td><td colspan="1">방어력</td><td colspan="1">[몬스터명] _Depensive_Power</td><td colspan="1">플레이어  방어력</td></tr>
 <tr><td colspan="1">22</td><td colspan="1"></td><td colspan="1">일반</td><td colspan="1">[몬스터명]_Common</td><td colspan="1">일반  몬스터,  기본적인  스탯이  존재함</td></tr>
 <tr><td colspan="1">23</td><td colspan="1"></td><td colspan="1">강화</td><td colspan="1">[몬스터명]_Enforce</td><td colspan="1">일반  몬스터보다  기본  스탯이  높으며  특별한  공격  기술 을  사용할  수  있음</td></tr>
 <tr><td colspan="1">24</td><td colspan="1"></td><td colspan="1">기본</td><td colspan="1">Idle</td><td colspan="1">가만히  있을  때  Idle  모션이  출력된다.</td></tr>
@@ -515,21 +515,19 @@ AI 요소는 몬스터 기능에 필요한 요소인데, 적절한 학습을 통
 
 **8.  스토리보드**
 
-![](Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.003.jpeg)
+![](docs/Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.003.jpeg)
 
 **Seven  Deadly  Sins  #1**
 
-주인공은  여느  때와  같이  평범하게  현대  사회인의  삶을  살고  있던  도중,  잠에서  깨어나니  이상한  동굴에 도착해있었다.  신은  주인공에게  세상이  죄악으로  물들었음을  이야기하고  그것을  해결할  지혜와  용기를  가 지고  있는  자,  주인공을  이  세계로  데려온  것이다.  우선  주인공은  목소리(안내)에  따라  장비를  챙겨  캄캄
+주인공은  여느  때와  같이  평범하게  현대  사회인의  삶을  살고  있던  도중,  잠에서  깨어나니  이상한  동굴에 도착해있었다.  신은  주인공에게  세상이  죄악으로  물들었음을  이야기하고  그것을  해결할  지혜와  용기를  가 지고  있는  자,  주인공을  이  세계로  데려온  것이다.  우선  주인공은  목소리(안내)에  따라  장비를  챙겨  캄캄한  동굴을  벗어나려고  한다.
 
-한  동굴을  벗어나려고  한다.
-
-![](Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.004.jpeg)
+![](docs/Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.004.jpeg)
 
 **튜토리얼  #2**
 
 주인공은  신에게  이  세계에  대한  간단한  내용을  들었다.  나태의  악마  벨페고르가  나태의  저주를  사용하여 세상을  뒤  흔들고  있다는  정보를  통해  이것을  해결하기  위해  동굴을  탈출하면서  벨페고르의  형상화된  잡 념(적)들과  전투를  펼치고  동굴을  탈출한다.  이곳에서  간단한  조작법과  전투  튜토리얼  등이  진행된다.
 
-![](Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.005.jpeg)
+![](docs/Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.005.jpeg)
 
 **모험의  시작  #3**
 
@@ -537,17 +535,14 @@ AI 요소는 몬스터 기능에 필요한 요소인데, 적절한 학습을 통
 
 의  요소를  해결해나간다.
 
-![](Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.006.jpeg)
+![](docs/Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.006.jpeg)
 
 **악마와의  혈투  #4**
 
 주인공은  성에  도착했을  때  이미  반  쯤  폐허가  됨을  인지하였고,  국왕이  시해되고  나라가  어지러웠던  이 유는  악마  벨페고르가  왕으로  군림하면서  나태의  저주를  퍼부었기  때문이었다.  여러  전투를  경험하면서 강해진  주인공은  벨페고르를  물리치기  위해  직접  성으로  이동했다.  해당  맵이  이  게임의  마지막  스토리 맵이다.
 
-![](Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.007.jpeg)
+![](docs/Aspose.Words.876a61c3-d6fc-4fe5-8cd1-0a2773a0ab4a.007.jpeg)
 
 **나태의  극복  #5**
 
 나태의  악마  벨페고르를  물리친  주인공은  세계가  다시  원래대로  돌아가고  있음을  느끼기  시작한다.  남아 있는  잔존  세력들과  전투를  치르기도  하며,  전투가  끝나면  마을로  돌아가  평화로운  엔딩을  맞이하게  된 다.  주인공은  드넓은  이  세계를  더  모험하고  싶어서  현실로  돌아가지  않고  아직  더  머물게  된다.
-
-
-
